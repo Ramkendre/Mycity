@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgencyRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appRegisterMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefSimNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirmName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgencyRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgencyRegistrationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirmRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IMEI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefSimNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirmName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirmType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pincode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferencemobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreateDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Longitute" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Latitute" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="district" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usertype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirmRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FirmRegistrationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirmRegMore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefSimNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="druglicenceno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vat_tinno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FoodLic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Homiopathiclic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ScheXlic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PanCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LBT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocRNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HosShopactlic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="druglicenceno_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vat_tinno_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FoodLic_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Homiopathiclic_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ScheXlic_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PanCard_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LBT_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocRNo_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HosShopactlic_rdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="druglicenceno_21" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="druglicenceno_rdt21" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cstno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cstno_rdt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirmRegMoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FirmRegMoreResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPurchaseOrder1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IMEI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EntryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppOrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appRegisterMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AgencyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPurchaseOrder1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPurchaseOrder1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneralOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IMEI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EntryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppOrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appRegisterMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AgencyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GoOrderDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneralOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneralOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddExpiryOrder2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IMEI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EntryDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppOrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appRegisterMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AgencyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddExpiryOrder2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddExpiryOrder2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_Companywise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appRegisterMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefSimNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ddltype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilterData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="district" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pincode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_CompanywiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Search_CompanywiseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgencyRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:AgencyRegistration" />
+  </wsdl:message>
+  <wsdl:message name="AgencyRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:AgencyRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="FirmRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:FirmRegistration" />
+  </wsdl:message>
+  <wsdl:message name="FirmRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:FirmRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="FirmRegMoreSoapIn">
+    <wsdl:part name="parameters" element="tns:FirmRegMore" />
+  </wsdl:message>
+  <wsdl:message name="FirmRegMoreSoapOut">
+    <wsdl:part name="parameters" element="tns:FirmRegMoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPurchaseOrder1SoapIn">
+    <wsdl:part name="parameters" element="tns:AddPurchaseOrder1" />
+  </wsdl:message>
+  <wsdl:message name="AddPurchaseOrder1SoapOut">
+    <wsdl:part name="parameters" element="tns:AddPurchaseOrder1Response" />
+  </wsdl:message>
+  <wsdl:message name="GeneralOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneralOrder" />
+  </wsdl:message>
+  <wsdl:message name="GeneralOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneralOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddExpiryOrder2SoapIn">
+    <wsdl:part name="parameters" element="tns:AddExpiryOrder2" />
+  </wsdl:message>
+  <wsdl:message name="AddExpiryOrder2SoapOut">
+    <wsdl:part name="parameters" element="tns:AddExpiryOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="Search_CompanywiseSoapIn">
+    <wsdl:part name="parameters" element="tns:Search_Companywise" />
+  </wsdl:message>
+  <wsdl:message name="Search_CompanywiseSoapOut">
+    <wsdl:part name="parameters" element="tns:Search_CompanywiseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DrugAppsSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgencyRegistration">
+      <wsdl:input message="tns:AgencyRegistrationSoapIn" />
+      <wsdl:output message="tns:AgencyRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FirmRegistration">
+      <wsdl:input message="tns:FirmRegistrationSoapIn" />
+      <wsdl:output message="tns:FirmRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FirmRegMore">
+      <wsdl:input message="tns:FirmRegMoreSoapIn" />
+      <wsdl:output message="tns:FirmRegMoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPurchaseOrder1">
+      <wsdl:input message="tns:AddPurchaseOrder1SoapIn" />
+      <wsdl:output message="tns:AddPurchaseOrder1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneralOrder">
+      <wsdl:input message="tns:GeneralOrderSoapIn" />
+      <wsdl:output message="tns:GeneralOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExpiryOrder2">
+      <wsdl:input message="tns:AddExpiryOrder2SoapIn" />
+      <wsdl:output message="tns:AddExpiryOrder2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_Companywise">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">searchdrug</wsdl:documentation>
+      <wsdl:input message="tns:Search_CompanywiseSoapIn" />
+      <wsdl:output message="tns:Search_CompanywiseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DrugAppsSoap" type="tns:DrugAppsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgencyRegistration">
+      <soap:operation soapAction="http://tempuri.org/AgencyRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmRegistration">
+      <soap:operation soapAction="http://tempuri.org/FirmRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmRegMore">
+      <soap:operation soapAction="http://tempuri.org/FirmRegMore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPurchaseOrder1">
+      <soap:operation soapAction="http://tempuri.org/AddPurchaseOrder1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneralOrder">
+      <soap:operation soapAction="http://tempuri.org/GeneralOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExpiryOrder2">
+      <soap:operation soapAction="http://tempuri.org/AddExpiryOrder2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_Companywise">
+      <soap:operation soapAction="http://tempuri.org/Search_Companywise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DrugAppsSoap12" type="tns:DrugAppsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgencyRegistration">
+      <soap12:operation soapAction="http://tempuri.org/AgencyRegistration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmRegistration">
+      <soap12:operation soapAction="http://tempuri.org/FirmRegistration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmRegMore">
+      <soap12:operation soapAction="http://tempuri.org/FirmRegMore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPurchaseOrder1">
+      <soap12:operation soapAction="http://tempuri.org/AddPurchaseOrder1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneralOrder">
+      <soap12:operation soapAction="http://tempuri.org/GeneralOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExpiryOrder2">
+      <soap12:operation soapAction="http://tempuri.org/AddExpiryOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_Companywise">
+      <soap12:operation soapAction="http://tempuri.org/Search_Companywise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DrugApps">
+    <wsdl:port name="DrugAppsSoap" binding="tns:DrugAppsSoap">
+      <soap:address location="http://www.ezeedrug.in/DrugApps.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DrugAppsSoap12" binding="tns:DrugAppsSoap12">
+      <soap12:address location="http://www.ezeedrug.in/DrugApps.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

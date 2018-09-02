@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Come2MyCityDB" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=www.com;Initial Catalog=Come2MyCityDB;Persist Security Info=True;User ID=come2mycity" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Come2MyCityDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UserMaster" Member="UserMasters">
+    <Type Name="UserMaster">
+      <Column Name="usrAutoId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usrUserId" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usrUserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrMiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrMobileNo" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="usrEmailId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrAddress" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="usrState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrDistrict" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrCityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrPIN" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="usrPhoneNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="usrAltMobileNo" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="usrDOB" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="usrHighestQualification" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrBoardUniversity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrProfession" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrIndustry" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrDesignation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrCompanyName" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrCarrerSkill" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrCarrerInterest" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrIdealMatch" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrBestFeature" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrHeight" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="usrBuild" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="usrPoliticalView" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrBooks" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrMusic" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrActive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrLogged" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrProfilePhoto" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="usrArea" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="usrTermCond" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrFriendRelId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="usrGender" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="usrRecentVisitor" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="usrControlMobileNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrMebPolitical" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrMebSocial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrCreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usrModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usrLastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usrAgentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usrFriRelGroup" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="isMarketingPerson" Type="System.Char" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="OfficeNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="FaxNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="JoinFlag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DND" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SMSbal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SMSCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="paidCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CHANGECOL" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CityMaster" Member="CityMasters">
+    <Type Name="CityMaster">
+      <Column Name="cityId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cityName" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="distId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityActive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FriendGroupRelation" Member="FriendGroupRelations">
+    <Type Name="FriendGroupRelation">
+      <Column Name="RelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FriendRelationMaster" Member="FriendRelationMasters">
+    <Type Name="FriendRelationMaster">
+      <Column Name="FriRelId" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="FriendId" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="FriRelName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Relation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="friendGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="usp_FetchGroupMemberSendSMS" Method="usp_FetchGroupMemberSendSMS">
+    <Parameter Name="last" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="first" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="userId" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="groupId" Type="System.String" DbType="NVarChar(5)" />
+    <ElementType Name="usp_FetchGroupMemberSendSMSResult">
+      <Column Name="usrUserId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usrProfilePhoto" Type="System.String" DbType="NVarChar(181)" CanBeNull="true" />
+      <Column Name="usrCity" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="usrFullName" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="usrMobileNo" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="rowNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

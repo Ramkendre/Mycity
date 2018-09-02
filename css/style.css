@@ -1,0 +1,491 @@
+
+.MainHeadingM 
+{
+	text-decoration:none;
+margin: 0;
+padding: 0px 0 0 20px;
+font-weight: 100;
+font-size: 27px;
+
+color: #fff;
+text-align:left;
+font-family:Arial;
+}
+
+
+.MainHeadingM:hover
+{
+    margin: 0;
+padding: 0px 0 0 20px;
+font-weight: 100;
+font-size: 27px;
+
+color: #fff;
+text-align:left;
+font-family:Arial;
+}
+
+.MainHeadingM:visited
+{
+   margin: 0;
+padding: 0px 0 0 20px;
+font-weight: 100;
+font-size: 27px;
+
+color: #fff;
+text-align:left;
+font-family:Arial;
+}
+
+.MainHeadingM:active
+{
+    margin: 0;
+padding: 0px 0 0 20px;
+font-weight: 100;
+font-size: 27px;
+
+color: #fff;
+text-align:left;
+font-family:Arial;
+}
+
+.MainHeading1 {
+margin: 0;
+padding: 0px 0 0 20px;
+font-weight: 100;
+font-size: 17px;
+
+color: #fff;
+text-align:left;
+font-family:Arial;
+}
+
+
+.menu {
+
+text-decoration:none;
+ color:White;
+font-size: 15px;
+font-weight: 600;
+height:30px;
+padding:10px;
+background-color:#009999;
+}
+
+ .menu:hover
+{
+
+text-decoration:none;
+ color:White;
+ background-color:#869bc7;
+font-size: 15px;
+font-weight: 600;
+height:30px;
+}
+
+.menu:visited
+{
+text-decoration:none;
+ color:White;
+font-size: 15px;
+font-weight: 600;
+height:30px;
+}
+
+.menu:active
+{
+text-decoration:none;
+ color:White;
+font-size: 15px;
+font-weight: 600;
+height:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.agency:link
+{
+text-decoration:none;
+color:White;
+font-family: Cambria ;
+}
+ .agency:hover
+{
+text-decoration:none;
+color:Orange;font-family: Cambria ;
+}
+.agency:visited
+{
+text-decoration:none;
+ color:White;
+ font-family: Cambria ;
+}
+.agency:active
+{
+text-decoration:none;
+color:White;
+font-family: Cambria ;
+}
+
+/*******************Marketing Menus********************/
+.menu_M {
+
+text-decoration:none;
+ color:White;
+font-size: 12px;
+font-weight: 600;
+height:30px;
+padding:10px;
+
+}
+
+ .menu_M:hover
+{
+
+text-decoration:none;
+ color:White;
+ background-image: url(../images/HoverMenuMarket.png);
+
+font-size: 12px;
+font-weight: 600;
+height:30px;
+}
+
+.menu_M:visited
+{
+text-decoration:none;
+ color:White;
+font-size: 12px;
+font-weight: 600;
+height:30px;
+}
+
+.menu_M:active
+{
+text-decoration:none;
+ color:White;
+font-size: 12px;
+font-weight: 600;
+height:30px;
+}
+/*******************End Marketing Menus********************/
+
+
+
+
+
+
+
+
+.V_menus
+{
+	
+	background-repeat:repeat-x; 
+	background-color:#009999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu1 {
+
+text-decoration:none;
+ color:#ffffff;
+font-size: 13px;
+font-weight: 600;
+height:30px;
+padding:10px;
+
+}
+
+.menu1:hover
+{
+
+text-decoration:none;
+background-image: url(../images/HoverMenuMarket.png);
+color:#e1e1e1;
+
+font-size: 15px;
+font-weight: 600;
+height:30px;
+}
+
+.menu1:visited
+{
+text-decoration:none;
+ color:White;
+font-size: 15px;
+font-weight: 600;
+height:30px;
+}
+
+.menu1:active
+{
+text-decoration:none;
+ color:White;
+font-size: 15px;
+font-weight: 600;
+height:30px;
+}
+
+
+
+#bottom { background: #3c4043 url(../images/bottom.jpg) no-repeat; padding: 5px 0; }
+
+#contentwrap {
+background: #3c4043 url(../images/content.jpg) repeat-y;
+padding: 0 40px 0 40px;
+}
+
+#content {
+float:left;
+width: 61%;
+margin-top: 20px;
+}
+#content h2 {
+margin: 0;
+color: #1f1f1f;
+line-height: 30px;
+font-size: 17px;
+font-weight: 100;
+}
+
+#content p { padding: 0 0 10px 0; color: #232323;}
+#content ul { padding: 0 20px 10px 15px; }
+#content ul li {
+padding: 3px;
+font-size:12px;
+}
+
+.footer { 
+text-align: center;
+color: #111;
+font-size: 12px;
+padding-bottom: 10px;
+font-family:Arial;
+background-color: #0d7074;
+
+}
+
+
+
+ 
+
+.ModalWindow
+
+{
+
+  border: solid 1px #c0c0c0;
+
+  
+ background-color :Black;
+  padding: 5px;
+
+  position:absolute;
+
+  top:-1000px;
+  padding:10px;
+  text-align:center;
+}
+
+.ModalWindow1
+
+{
+
+  border: solid 1px #c0c0c0;
+
+  
+ background-color :Black;
+  padding: 5px;
+
+  position:absolute;
+
+  
+  padding:10px;
+  text-align:center;
+}
+
+
+
+.trInnerTable
+{
+    width: 100%;
+    line-height: 30px;
+}
+.tdLabelInner
+{
+    width: 30%;
+    
+    padding-left: 10px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 12px;
+    font-family: Tahoma;
+    vertical-align:top;
+}
+.dropdownlist
+{
+	width:140px;
+	color:#808080;
+	font-size: 12px;
+    font-family: Tahoma;
+}
+.valid
+{
+	font-family: Tahoma;
+	font-size: 12px;
+	}
+.tdTextInner
+{
+    width:60%;
+    line-height: 30px;
+    float: left;
+    vertical-align:top;
+    font-family: Tahoma;
+	font-size: 12px;
+}
+.txtcss
+{
+	width:100px;
+	
+}
+.tdErrorInner
+{
+    width: 10%;
+    float: left;
+    line-height: 30px;
+    font-family: Tahoma;
+	font-size: 12px;
+}
+
+.lblHeader
+{
+    font-size:medium;
+    font-style: normal;
+    color: Black;
+}
+.ddlcss
+{
+	width:130px;
+	text-align: left;
+}
+.frndSearchLabelHeader
+{
+    font-size:11px;
+    font-family:Arial;
+    vertical-align:baseline;
+    color:Maroon;
+}
+
+.GridViewStyle
+{
+    font-family: Arial, Sans-Serif;
+    font-size: small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border: #999999 1px solid;
+}
+
+.HeaderStyle, .PagerStyle /*Common Styles*/
+{
+    background-image: url(../AdminImage/HeaderGlassBlack.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-color: #fff;
+    border-bottom: solid 1px #999;
+}
+.HeaderStyle th
+{
+    padding: 5px;
+    background-image: url(../AdminImage/HeaderWhiteChrome.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-color: #fff;
+    border-bottom: solid 1px #999;
+}
+.HeaderStyle a
+{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: left;
+    font-weight: normal;
+}
+.PagerStyle table
+{
+    text-align: center;
+    margin: auto;
+}
+.PagerStyle table td
+{
+    padding: 5px;
+    background-image: url(../AdminImage/HeaderWhiteChrome.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-color: #fff;
+    border-bottom: solid 1px #999;
+}
+.PagerStyle td
+{
+    padding: 5px;
+    background-image: url(../AdminImage/HeaderWhiteChrome.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-color: #fff;
+    border-bottom: solid 1px #999;
+}
+.PagerStyle a
+{
+    color: #333;
+    text-decoration: none;
+    padding: 2px 10px 2px 10px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #999;
+    border-bottom: solid 1px #999;
+    border-left: solid 1px #fff;
+}
+.PagerStyle span
+{
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    padding: 2px 10px 2px 10px;
+}
+/*RowStyles*/
+.RowStyle td, .AltRowStyle td, .SelectedRowStyle td, .EditRowStyle td /*Common Styles*/
+{
+    padding: 5px;
+    border-right: solid 1px #999;
+}
+.RowStyle td
+{
+    background-color: #E4E4E4;
+}
+.AltRowStyle td
+{
+    background-color: #fff;
+}
+.SelectedRowStyle td
+{
+    background-color: #FF9;
+}
+

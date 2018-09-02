@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster3.master.cs"
+    Inherits="Master_MainMaster1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../KResource/CSS/Home.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <center>
+        <div class="Header">
+            <img src="../HomeImages/myct.png" alt="" style="width: 193px; height: 84px" />
+        </div>
+    </center>
+    <div>
+        <div class="MenuBack">
+            <center>
+                <div id="cssmenu">
+                    <ul>
+                        <li><a href="../html/UserDisplay.aspx">Mobile Directory</a></li>
+                        <li><a href="../html/FriendRelative.aspx">Friends &amp; Relative</a>
+                            <%-- <ul>
+                                <li><a href='#'><span>Product 1</span></a>
+                                    <ul>
+                                        <li><a href='#'><span>Sub Item</span></a></li>
+                                        <li><a href='#'><span>Sub Item</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href='#'><span>Product 2</span></a>
+                                    <ul>
+                                        <li><a href='#'><span>Sub Item</span></a></li>
+                                        <li><a href='#'><span>Sub Item</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>--%>
+                        </li>
+                        <li><a id="smsactive" href="" onclick="fnSetNewControls" runat="server">SMS</a></li>
+                        <li><a href="../html/UserInfo.aspx">View Profile</a></li>
+                        <li><a href="../Logcode.aspx">Use Your Mobile </a></li>
+                        <li><a href="~/html/JobSeeker.aspx" runat="server">JobPortal</a></li>
+                        <li><a href="../html/EventMyct.aspx">Events</a></li>
+                    </ul>
+                </div>
+            </center>
+        </div>
+    </div>
+    <div>
+        <center>
+            <div class="MainText">
+                <div class="DivBorder">
+                    <form id="form1" runat="server">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </center>
+    </div>
+    <div class="footerr">
+        <center>
+            <span>Copyright @2010 eZeesoftindia. All rights are reserved Copyright @2010 eZeesoftindia.
+                All rights are reserved</span>
+        </center>
+    </div>
+</body>
+</html>

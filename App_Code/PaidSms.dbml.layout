@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PaidSms">
+  <DataContextMoniker Name="/PaidSmsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5ba0cdb0-b0be-463c-b31a-b5acb2f3b662" absoluteBounds="2.75, 1, 2, 1.75354248046875">
+      <DataClassMoniker Name="/PaidSmsDataContext/sendPaidSmsStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="913ac900-9242-40e3-9a65-c7b75776966d" absoluteBounds="2.765, 1.46, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

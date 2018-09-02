@@ -1,0 +1,206 @@
+/*
+Theme Name:Theme 210
+Theme URI:http://www.dreamtemplate.com/
+Description:The original WordPress theme that graced versions 2.6.x and prior.
+Version:1.0
+Author:DreamTemplate
+*/ 
+/*=== Setup ===*/
+* { border:0; margin:0 auto; padding:0; outline:none;}
+body { margin:0; padding:0px 0 0; color:#919191; font:normal 12px/1.8em "Liberation sans", Arial, Helvetica, sans-serif; background:#e7e7e7 url(images/main_bg.jpg) repeat left top; margin-top:0px;}
+.html_bg { }
+a { color:#36b8c5; text-decoration:none;}
+a:hover { text-decoration:underline;}
+p.clr, .clr { clear:both; padding:0; margin:0; background:none;}
+p.bg, .bg { clear:both; padding:0; margin:10px 0; border-bottom:1px solid #bababa; height:2px;}
+input, select, textarea { border:#cfcfcf 1px solid; color:#404040; font-size:12px; padding:3px; font-family:"Liberation sans", Arial, Verdana, Helvetica, sans-serif;}
+li { list-style:none;}
+
+h2, h2 a { color:#4b4b4b; font-size:20px; font-weight:bold; line-height:1em; letter-spacing:normal; margin:0 0 1em;}
+h3, h3 a { padding:0px; color:#565656; font-size:14px; line-height:1.5em; margin:0; text-decoration:none;}
+h4 { font-size:1em; margin:0 0 1em;}
+p { line-height:1.5em; padding:0 0 1.3em;}
+/*=== Layout ===*/
+#page { margin:0 auto; padding:0 30px; width:900px; background-color:#fff;}
+/*=== Header ===*/
+#header { margin:0 auto; padding:0;}
+/*- Logo -*/
+.logo { margin:0; padding:28px 0 0; float:left; width:auto; height:66px;}
+.logo h1 { margin:0; padding:0; float:left; width:auto; font-size:36px; font-weight:normal; line-height:1em; color:#4b4b4b;}
+.logo h1 a { color:#4b4b4b; text-decoration:none;}
+.logo h1 a:hover { text-decoration:none;}
+.logo h1 small { display:block; margin:0; padding:0 12px 0 0; color:#787878; font-size:12px; font-weight:normal; line-height:1em; letter-spacing:normal; text-align:right;}
+/* RSS */
+.rss { margin:28px 0 0 20px; padding:0 0 4px; float:right; width:330px;}
+.rss .img_rss { padding:0 0 0 8px; float:right; border:none;}
+.rss p { margin:0; padding:4px 0 0; font-size:18px; font-weight:normal; line-height:1.2em; text-align:right; color:#5b5b5b;}
+.rss p a, .rss p a:hover { color:#5b5b5b; text-decoration:none;}
+.rss ul { margin:0; padding:0; list-style:none; float:right; width:auto;}
+.rss ul li { padding:0 8px; float:left; font-size:11px; line-height:1.2em; border-right:1px solid #afb0b2;}
+.rss ul li.last_rss { padding:0 0 0 8px; border-right:none;}
+.rss ul li a { color:#949494; text-decoration:none;}
+.rss ul li a:hover { text-decoration:underline;}
+/* Search form */
+.search { padding:2px 1px 0 0; float:right; width:auto;}
+#search span { display:block; background:#FFF; border:1px solid #3da5af; height:28px; margin:0; padding:0; border:none; width:215px;}
+#search input#s { margin:0; padding:7px 10px; float:left; width:160px; color:#a0a0a0; font-size:12px; line-height:14px; font-weight:normal; background:none; border:none;}
+#search .btn { float:left; padding:0; margin:0; border:0; width:auto;}
+/*=== All Columns ===*/
+#columns { margin:0 auto; padding:24px 0 0px; width:900px;}
+/*=== Page Title ===*/
+.pagetitle { }
+.pagetitle h2 { }
+/*=== Center Column ===*/
+#centercol { margin:0 0 0px; padding:0; float:left; width:575px;}
+/*=== Right Column ===*/
+#rightcol { margin:0; padding:0; float:right; width:260px;}
+.box { margin:0 0 12px; padding:0 0 0px; background:none; border:none;}
+.box .content { }
+.box_r { margin:0 0 24px; padding:0; background:none; border:none;}
+.box_r .content { margin:0; padding:0;}
+.small_link { padding:10px 0; margin:0 auto; text-align:center;}
+.small_link a { color:#6f6f6f; text-decoration:none;}
+.small_link small { font-size:11px;}
+/*=== Sub Columns ===*/
+.subcols { background:url(images/subcols-bgr.gif) repeat-y left; height:1%;}
+.col1, .col2 { float:left; width:285px;}
+.col2 { float:right;}
+/*=== Post ===*/
+.post-block { }
+.post-margin { margin-left:236px;}
+/*- Post Title -*/
+.post-title { padding:0px 0; margin:0;}
+.post-title h2 { margin:0; padding:0;}
+.post-title h2 a { display:inline; margin:0; padding:0; text-decoration:none;}
+/*- Post Excerpt -*/
+.post-excerpt { padding:0; margin:0;}
+.post-excerpt p { margin:0;}
+.post-excerpt p strong { letter-spacing:1px; color:#383838;}
+.post-excerpt a { color:#77d7ec; text-decoration:underline; font-weight:bold;}
+.post-excerpt a.comm { float:left;}
+/* post-leav */
+.post-leav { margin:0; padding:6px 12px; font-size:13px; line-height:1em; color:#fff; background-color:#36b8c5;}
+.post-leav a { color:#fff; text-decoration:none;}
+/* blog-content */
+.blog-content { float:right; width:360px;}
+/* comments count */
+.comm_count { margin:0 0 12px; padding:5px 0; float:right; font-size:12px; color:#9a9a9a;}
+.comm_count a { font-weight:bold; color:#36b8c5; text-decoration:none;}
+.comm_count a:hover { text-decoration:underline;}
+/*- Post Blockquote -*/
+.post blockquote { border-left:3px solid #cfcfcf; font-size:13px; font-style:italic; margin:0 0 1.5em; padding:5px 0 0 10px;}
+/*- Post Author -*/
+.post-author { margin:0 0 1em;}
+.author-details { font-size:11px;}
+.author-descr { display:table; height:1%;}
+/* post-commets */
+.post-commets { float:right;}
+/*- Post Date -*/
+.post-date { margin:0 0 12px; padding:4px 0; color:#9a9a9a; font-size:12px; border-top:1px dotted #9a9a9a; border-bottom:1px dotted #9a9a9a;}
+.post-date a { color:#36b8c5; font-weight:bold; text-decoration:none;}
+.post-date a:hover { text-decoration:underline;}
+/*- Post Comments -*/
+.post-comments { }
+.post-comments h2 { padding-top:10px;}
+.post-comments .fl { width:80px;}
+.post-comments .fr { width:480px;}
+/*- Widget Title - */
+.wtitle { padding:16px 0; margin:0;}
+.wtitle h2 { margin:0; padding:0; font-size:24px; line-height:1em;}
+/*=== Styling Boxes ===*/
+/*- Box1 -*/
+.box { }
+/*- Box2 -*/
+.box2 { background-color:#d9d9d9; border:1px solid #cfcfcf; height:1%; margin:0 0 20px; padding:15px; min-height:115px; width:450px;}
+.box2.alt { background:#FFFFFF;}
+.comm-name, .comm-date { line-height:20px;}
+/*=== Styling Lists ===*/
+/*=== Styling Forms ===*/
+input.btn { background:none; border:0; margin:0; padding:0;}
+select { padding:1px;}
+/*- Message -*/
+.message div { margin:0 0 18px;}
+.message input { padding:9px 15px; width:450px;}
+.message textarea { height:114px; overflow:auto; padding:9px 15px; width:450px; font-family:Verdana;}
+.message .submit { float:left;}
+.message .btn { padding:0; width:128px; height:32px; background:url(images/button.gif);}
+.message .notice { color:#a4a4a4; float:right; font-style:italic; padding:10px 0 0;}
+/*=== Pics, Thumbs, Ads etc. ===*/
+.pic img { display:block; margin:0 16px 10px 0; padding:0; float:left; background-color:#fff; border:none;}
+.pic.fl img { }
+.pic.fr img { }
+.th { display:block; margin:0 0 .5em;}
+.th.fl img { margin-right:10px; max-width:40px;}
+.banner a img { margin:0 3px;}
+.ads img { margin:0 1px 5px 0; padding:0; border:none;}
+.widget_flickrRSS img { border:1px solid #cfcfcf; margin:3px;}
+.box .ac img { border:0; margin:0;}
+.banner { margin:0; padding:0; background:none;}
+
+/*=== Footer ===*/
+#page_bottom { padding:0 0 20px;}
+#footer { margin:0 auto; padding:0 30px; width:900px; height:60px; background:#fff url(images/dotted.gif) no-repeat center top;}
+#footer .text1, #footer .text2, #footer .text3{ padding:24px 0 0; font-weight:bold; line-height:1em; color:#9a9a9a;}
+#footer .text1 { float:left;}
+#footer .text3 {  margin-left:200px; float:left;}
+#footer .text2 { float:right;}
+#footer .text1 a, #footer .text2 a ,#footer .text3 a{ font-weight:bold; text-decoration:none; color:#9a9a9a;}
+
+/*=== Misc. ===*/
+.fix { clear:both; height:1px; margin:-1px 0 0; overflow:hidden;}
+.hl, .hl2 { background:url(images/hl-dot.gif) repeat-x top; clear:both; height:2px; overflow:hidden; width:100%;}
+.hl2 { background:none; border-top:1px solid #e7e7e7; height:1px; margin:0 0 .8em;}
+.fl { float:left;}
+.fr { float:right;}
+.ac { text-align:center; padding:0;}
+.ac img { border:none; margin:0; padding:0 8px 0 0;}
+.ar { text-align:right;}
+.noBorder { border:0;}
+.font-sm { font-weight:normal;}
+.white { color:#FFF;}
+
+.slider { margin:0; padding:12px 0 0; background:url(images/slider_shade.png) no-repeat center 261px;}
+
+.index-newsblock { margin:0; padding:0 0 16px;}
+.index-newsblock a { text-decoration:none;}
+.index-newsblock a.date { font-weight:bold; font-size:11px;}
+.index-newsblock a.comments { font-weight:bold;}
+.index-newsblock a:hover { text-decoration:underline;}
+.index-newsblock p { margin:0; padding:0;}
+.index-newsblock p.index-newsinfo { margin-bottom:8px; padding:12px 0 8px; border-bottom:1px dotted #9a9a9a;}
+.index-newsblock p.index-newscontent { line-height:1.5em;}
+.index-newsblock p.index-newscontent a { color:#919191;}
+.index-newsblock h3 { margin:0; padding:0; font-size:13px; font-weight:bold; line-height:1.5em;}
+.index-newsblock h3 a { color:#9a9a9a;}
+
+/* footer2 */
+.footer2 { }
+.footer2_resize { margin:0 auto; padding:0 30px; width:900px; background:#fff url(images/dotted.gif) no-repeat center top;}
+.footer2 a { color:#9a9a9a;}
+.footer2 .col { margin:0; padding:0; float:left; padding:0;}
+.footer2 .col1 { width:400px; padding:10px 0 10px;}
+.footer2 .col2 { width:500px; padding:10px 0px 10px;}
+.footer2 .col3 { width:200px; padding:10px 0 10px;}
+.footer2 .col ul { margin:0; padding:0; list-style:none;}
+.footer2 .col ul li { margin:0; padding:3px 0;}
+.footer2 .col ul li a { color:#747373; text-decoration:none; padding-left:10px; background:url(images/li.gif) no-repeat left center;}
+.footer2 .col ul li a:hover { text-decoration:underline; color:#36b8c5; background:url(images/li_a.gif) no-repeat left center;}
+.footer2 .flickr_col img { margin:0 8px 10px 0; padding:3px; width:50px; height:50px; border:1px solid #d8d8d8;}
+.footer2 h2 { margin:0; padding:0 0 12px; font-size:24px; font-weight:normal; color:#4b4b4b;}
+.footer2news { margin:0; padding:0 0 16px;}
+.footer2news h3 { margin:0; padding:8px 0 0; font-size:12px; font-weight:bold; color:#747373;}
+.footer2news p { margin:0; padding:0;}
+.footer2news a { text-decoration:none;}
+.footer2news a:hover { text-decoration:underline;}
+.footer2news p.footer2content a { color:#747373;}
+.footer2news .icon_right { float:left; padding:0 16px 0 0;}
+
+ul.def_ul { margin:0; padding:0 0 0 16px; list-style:none;}
+ul.def_ul li { margin:0; padding:2px 0; list-style:none;}
+ul.def_ul li a { color:#747373; text-decoration:none; padding-left:10px; background:url(images/li.gif) no-repeat left center;}
+ul.def_ul li a:hover { text-decoration:underline; color:#36b8c5; background:url(images/li_a.gif) no-repeat left center;}
+#log{
+font-size:14px;
+color:#009595;
+font-weight:bold;
+}

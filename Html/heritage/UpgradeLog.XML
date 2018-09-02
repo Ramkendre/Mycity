@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+  <Properties>
+    <Property Name="Solution" Value="MethodInvokeWithJQuery">
+    </Property>
+    <Property Name="Solution File" Value="D:\Headfitted\MethodInvokeWithJQuery\MethodInvokeWithJQuery\MethodInvokeWithJQuery.sln">
+    </Property>
+    <Property Name="Date" Value="Tuesday, October 16, 2012">
+    </Property>
+    <Property Name="Time" Value="20:59 PM">
+    </Property>
+  </Properties>
+  <Event ErrorLevel="0" Project="" Source="MethodInvokeWithJQuery.sln" Description="File successfully backed up as D:\Headfitted\MethodInvokeWithJQuery\MethodInvokeWithJQuery\Backup\MethodInvokeWithJQuery.sln">
+  </Event>
+  <Event ErrorLevel="1" Project="" Source="..\..\..\Praveen\DotNet2.0\MethodInvokeWithJQuery\" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+  </Event>
+  <Event ErrorLevel="2" Project="D:\Praveen\DotNet2.0\MethodInvokeWithJQuery\" Source="..\..\..\Praveen\DotNet2.0\MethodInvokeWithJQuery\" Description="ERROR: Failed to back up Web site D:\Praveen\DotNet2.0\MethodInvokeWithJQuery\">
+  </Event>
+  <Event ErrorLevel="0" Project="" Source="MethodInvokeWithJQuery.sln" Description="Solution converted successfully">
+  </Event>
+  <Event ErrorLevel="3" Project="" Source="MethodInvokeWithJQuery.sln" Description="Converted">
+  </Event>
+</UpgradeLog>

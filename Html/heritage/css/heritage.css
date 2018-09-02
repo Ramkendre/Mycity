@@ -1,0 +1,366 @@
+﻿body
+{
+}
+.display-none
+{
+	display: none;
+}
+.mainContainer
+{
+	height: 500px;
+	width: 78%;
+	background-color: #ededed;
+	padding: 30px;
+}
+
+.IconPlusButton
+{
+	background-image: url(../imagess/Add_icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 24px !important;
+	border: none !important;
+	outline: none;
+	background-color: transparent;
+}
+.IconMinusButton
+{
+	background-image: url(../imagess/Delete.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 24px;
+	border: none !important;
+	outline: none;
+	margin-top: 3px;
+	background-color: transparent;
+}
+.EditButton
+{
+	background-image: url(../imagess/Edit.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 24px;
+	border: none !important;
+	outline: none;
+	margin-top: 3px;
+	background-color: transparent;
+}
+.EditButton:hover
+{
+	cursor: pointer;
+}
+.IconMinusButton:hover, .IconPlusButton:hover
+{
+	cursor: pointer;
+}
+.allButtons
+{
+	float: right;
+	height: 20px;
+}
+.submitButton
+{
+	background-image: url(../imagess/Button_bg.png);
+	background-position: 0 -90px;
+	background-repeat: repeat-x;
+	background-color: transparent;
+	color: #4C4C4C;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	height: 24px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 20px !important;
+	padding: 0px 10px;
+	text-shadow: 0 1px 0 #FAFAFA;
+	border: none;
+	cursor: pointer;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #4c4c4c;
+}
+.submitButton
+{
+	font-size: 14px !important;
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+.submitButton:hover
+{
+	background-position: 0 -30px;
+	color: White;
+	text-shadow: 0 1px 0 #333333;
+}
+.submitButton:active
+{
+	background-position: 0 -60px;
+	color: #f1f1f1;
+	text-shadow: 0 1px 0 #333333;
+}
+
+.cardContainer
+{
+	width: 200px;
+	height: 100px;
+	background-color: #82981c;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #4c4c4c;
+}
+.cardHeader
+{
+	height: 20px;
+}
+.personPhoto
+{
+	width: 60px;
+	height: 70px;
+	position: absolute;
+	background-color: Red;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.personInfo
+{
+	width: 120px;
+	height: 70px;
+	float: right;
+	background-color: Yellow;
+	margin: 5px;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #4C4C4C;
+}
+.imageClass
+{
+	width: 60px;
+	height: 70px;
+	border: 1px solid #4c4c4c !important;
+}
+
+.addPersonModel
+{
+	height: 300px;
+	width: 410px;
+}
+.addPersonModelTable
+{
+	width: 400px !important;
+}
+.addPersonModelTable td:first-child
+{
+	width: 100px !important;
+}
+.addPersonModelTable td:last-child
+{
+	width: 200px !important;
+}
+
+
+/* New table structure css*/
+.cardContainer
+{
+	width: 200px;
+	height: 100px;
+	background-color: #82981c;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #4c4c4c;
+}
+.cardTopLineNullContainer
+{
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 50px 5px 0px 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.cardTopLineNullContainer::before, .cardTopLineNullContainer::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	width: 50%;
+	height: 50px;
+}
+.cardTopLineNullContainer::after
+{
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.cardNullContainer
+{
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0px 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.cardNullContainer::before, .cardNullContainer::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%;
+	height: 100px;
+}
+.cardNullContainer::after
+{
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.cardNullContainer1
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0px 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.cardNullContainer1::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%;
+	height: 40px;
+}
+.cardNullContainer1::after
+{
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.cardNullContainer2
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0px 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.cardNullContainer2::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%;
+	height: 50px;
+}
+.cardNullContainer2::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	width: 50%;
+	height: 40px;
+}
+.cardNullContainer2::after
+{
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.cardNullContainer3
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 0px 0px 0px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.cardNullContainer3::before, .cardNullContainer3::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 80%;
+	height: 50px;
+}
+.cardNullContainer3::after
+{
+	right: auto;
+	left: 50%;
+}
+.cardNullContainer4
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0px 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.cardNullContainer4::before, .cardNullContainer4::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%;
+	height: 40px;
+}
+.cardNullContainer4::after
+{
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}

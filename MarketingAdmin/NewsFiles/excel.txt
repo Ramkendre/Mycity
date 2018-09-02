@@ -1,0 +1,114 @@
+ protected void btnUploadFile_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (excelFileUpload.HasFile)
+            {
+                string path = "";
+                path = Server.MapPath("Download");
+                path = path + "\\" + excelFileUpload.FileName;
+                string ab = excelFileUpload.FileName;
+
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                    excelFileUpload.SaveAs(path);
+                }
+                else
+                {
+                    excelFileUpload.SaveAs(path);
+                }
+            }
+
+            string strQuery = "Select * From [Sheet1$]";
+            DataSet dscount = GetDataTable(strQuery);
+
+            FetchData(dscount);
+
+            lblStatus.Text = "Record Added Successfully..!!!";
+            lblStatus.Font.Bold = true;
+            lblStatus.ForeColor = System.Drawing.Color.Green;
+            lblStatus.Visible = true;
+
+            //gvExportToExcel.DataSource = dscount.Tables[0];
+            //gvExportToExcel.DataBind();
+        }
+        catch (Exception ex)
+        {
+            lblStatus.Text = "ERROR : " + ex;
+            lblStatus.Font.Bold = true;
+            lblStatus.ForeColor = System.Drawing.Color.Red;
+            lblStatus.Visible = true;
+        }
+    }
+    public void FetchData(DataSet excelDS)
+    {
+
+        string NewsHead = string.Empty;
+        string NewsDetails = string.Empty;
+        string NPaper = string.Empty;
+        string Role = string.Empty;
+        string Date = string.Empty;
+        string Time = string.Empty;
+        string TypeOfNews = string.Empty;
+        string Location = string.Empty;
+        string Feedback = string.Empty;
+        string EnteryMobileNo = string.Empty;
+        for (int k = 0; k < excelDS.Tables[0].Rows.Count; k++)
+        {
+            //Id = Convert.ToInt32(excelDS.Tables[0].Rows[k][0]);
+            NewsHead = excelDS.Tables[0].Rows[k][0].ToString();
+            NewsDetails = excelDS.Tables[0].Rows[k][1].ToString();
+            NPaper = excelDS.Tables[0].Rows[k][2].ToString();
+            Role = excelDS.Tables[0].Rows[k][3].ToString();
+            Date = excelDS.Tables[0].Rows[k][4].ToString();
+            Time = excelDS.Tables[0].Rows[k][5].ToString();
+            TypeOfNews = excelDS.Tables[0].Rows[k][6].ToString();
+            Location = excelDS.Tables[0].Rows[k][7].ToString();
+            Feedback = excelDS.Tables[0].Rows[k][8].ToString();
+            //if ((Id).ToString() != "" && Id != "")
+            //{
+            //    //string SqlQuery1 = " Select StudName From tblSocialWelFareResult Where CenterIdNo='" + centerIdNo + "' and UserIdNo='" + userIdNo + "'";
+            //string student = cc.ExecuteScalar(SqlQuery1);
+
+            //if (student != "")
+            //{
+            //}
+            //else
+            //{
+            string str = DateTime.Now.Date.ToString("yyyy-MM-dd");
+            string SqlQuery = "Insert Into [DBeZeeOnlineExam].[dbo].[tblStudentRegister]([NewsHead],[NewsDetails],[NPaper],[Role],[Date],[Time],[TypeOfNews],[Location],[Feedback],[UserId],[CurrentDate])" +
+                             " values(N'" + NewsHead + "',N'" + NewsDetails + "',N'" + NPaper + "',N'" + Role + "',N'" + Date + "',N'" + Time + "',N'" + TypeOfNews + "',N'" + Location + "',N'" + Feedback + "','" + Session["User"].ToString() + "','" + str + "')";
+            //string SqlQuery = " Insert Into tblSocialWelFareResult(SNO,StudName,HostelName,Location,CenterIdNo,UserIdNo,ExamDate,TotalMarks,Grades,Result) " +
+            //                  " Values (" + SNO + ",'" + stuName + "','" + hostelName + "','" + location + "','" + centerIdNo + "','" + userIdNo + "','" + exDate + "','" + totMark + "','" + grades1 + "','" + result1 + "') ";
+            DataSet ds = cc.ExecuteDataset(SqlQuery);
+
+            //}
+            //}
+        }
+    }
+
+    public DataSet GetDataTable(string strQuery)
+    {
+        DataSet tempDs = null;
+        string filePath = Server.MapPath("Download\\" + excelFileUpload.FileName);
+        {
+            string conPath = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=1\"";
+            OleDbConnection conn = new OleDbConnection(conPath);
+            try
+            {
+                conn.Open();
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(strQuery, conn);
+                tempDs = new DataSet();
+                adapter.Fill(tempDs);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<h4>" + ex.Message);
+            }
+            conn.Close();
+        }
+        return tempDs;
+
+    }

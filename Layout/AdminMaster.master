@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs"
+    Inherits="Layout_AdminMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../resources/stylesheet/boxy.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/stylesheet/css.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/stylesheet/ddlevelsmenu-base.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/stylesheet/css.css" rel="stylesheet" type="text/css" />
+
+    <script src="../resources/JScript/inputbox.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="../resources/New_CSS/css/style.css" />
+
+    <script src="../resources/New_CSS/js/jquery.js" type="text/javascript"></script>
+
+    <script src="../resources/New_CSS/js/script.js" type="text/javascript"></script>
+
+    <link href="../resources/BoothMenu/styles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #MARQUEE1
+        {
+            margin-left: 0px;
+        }
+        .style1
+        {
+            width: 88px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div>
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td class="header_bg" align="left" valign="bottom" colspan="2">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td valign="middle" style="background-color: #FFFBD6" class="style1">
+                                &nbsp;<img src="../Images/ezeelogo.JPG" style="width: 139px; height: 78px" />
+                            </td>
+                            <td style="height: 90px; color: #FF8000; background-color: #FFFBD6; font-size: xx-large;
+                                font-family: 'Times New Roman', Times, serif; text-align: center; font-weight: 700;"
+                                align="left" valign="middle">
+                                <%=Convert.ToString(Session["DisplayName"])%>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 5px; background-color: White;" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px;" colspan="2">
+                    <div id="menu">
+                        <div id="nav">
+                            <ul>
+                                <li id="mhomwe" runat="server"><a href="../Admin/Home.aspx?1">Home</a>
+                                    <ul>
+                                        <li id="mUpdateProfile" runat="server"><a href="../Admin/ChangeDetails.aspx">Update
+                                            Profile</a> </li>
+                                    </ul>
+                                </li>
+                                <li id="msuperadmin" runat="server"><a>Super Admin Panel</a>
+                                    <ul>
+                                        <li id="mlocation" runat="server"><a href=" ">Location</a>
+                                            <ul>
+                                                <li id="mState" runat="server"><a href="../Admin/State.aspx?20">State</a></li>
+                                                <li id="mdistrict" runat="server"><a href="../Admin/District.aspx?21">District</a></li>
+                                                <li id="mtaluka" runat="server"><a href="../Admin/Talukamaster.aspx?22">Taluka</a></li>
+                                                <li id="mcity" runat="server"><a href="../Admin/City.aspx?23">City</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="mRole" runat="server"><a href="../Admin/Role.aspx?15">Role </a></li>
+                                      <li id="mschool" runat="server"><a href="../Admin/CompanyList.aspx?24">Company Profile
+                                       </a></li>
+                                        </li>
+                                        <li id="mUserRegister" runat="server"><a href="../Admin/UserList.aspx?17">User </a>
+                                        </li>
+                                        <li id="mItemMaster" runat="server"><a href="../Admin/ItemMaster.aspx?25">Item Master</a></li>
+                                        <li id="mexam" runat="server" visible="false"><a href="../Admin/addExamname.aspx?id=18">
+                                            Exam Name</a></li>
+                                        <li id="mtestDefination" runat="server"><a href="../Admin/TestDefinition.aspx?14">Test
+                                            Defination</a></li>
+                                        <li id="massignChapter" runat="server"><a href="../Admin/AddExamChapter.aspx?27">Assign
+                                            Chapter To exam</a></li>
+                                        <li id="mSetExamPaper" runat="server"><a href="../Admin/AssignQuestionInExam.aspx?28">
+                                            Set Exam Paper</a></li>
+                                    </ul>
+                                </li>
+                                <li id="msubadmin" runat="server"><a>Sub Admin Panel</a>
+                                    <ul>
+                                        <li id="mUploadexcel" runat="server"><a href="../Admin/ExcelUpload.aspx">Excel Upload</a></li>
+                                        <li id="mUploadAccessDB" runat="server"><a href="../Admin/AccessToSql.aspx">Access Database
+                                            Upload</a></li>
+                                        <li id="mquestion" runat="server"><a href="../Admin/DisplayQues.aspx?12">Question</a></li>
+                                    </ul>
+                                </li>
+                                <li id="muser" runat="server"><a>User Panel</a>
+                                    <ul>
+                                        <li id="mPractice" runat="server"><a href="../Admin/Practice.aspx?id=19">Practice</a></li>
+                                    </ul>
+                                </li>
+                                <li id="mmcq" runat="server"><a href="../Admin/exTest.aspx">MCQ</a></li>
+                                <li id="mAboutUs" runat="server"><a>AboutUS</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li id="mcontactUs" runat="server"><a>Contact US</a></li>
+                                <li id="mlogout" runat="server"><a href="../UserLogin.aspx">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <%--  <td class="heading_section" style="text-align: center;" colspan="2">
+                <asp:Label ID="lblMainHeading" Text="" runat="server" CssClass="heading_section_text"></asp:Label>
+            </td>--%>
+            <tr align="center" style="height: 50px">
+                <td>
+                    <asp:Label ID="lblMainHeading" Text="" runat="server" CssClass="heading_section_text"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100%; font-size: x-large; font-family: 'Times New Roman', Times, serif;"
+                    valign="top" align="center">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMaster.master.cs" Inherits="Layout_UserMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../resources/stylesheet/css.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/stylesheet/boxy.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/stylesheet/ddlevelsmenu-base.css" rel="stylesheet" type="text/css" />
+
+    <script src="../resources/JScript/inputbox.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript">
+        <!--
+    // 
+    // 
+    function numbersonly(myfield, e, dec) {
+        var key;
+        var keychar;
+
+        if (window.event)
+            key = window.event.keyCode;
+        else if (e)
+            key = e.which;
+        else
+            return true;
+        keychar = String.fromCharCode(key);
+
+        // control keys
+        if ((key == null) || (key == 0) || (key == 8) ||
+        (key == 9) || (key == 13) || (key == 27))
+            return true;
+
+            // numbers with prcision..
+        else if ((("0123456789.").indexOf(keychar) > -1))
+            return true;
+
+            //        // decimal point jump
+            //        else if (dec && (keychar == "."))
+            //           {
+            //           myfield.form.elements[dec].focus();
+            //           return false;
+            //           }
+        else
+            return false;
+    }
+
+
+
+    // numbers without prcision..
+
+    function numbersonlywithoutdecimal(myfield, e, dec) {
+        var key;
+        var keychar;
+
+        if (window.event)
+            key = window.event.keyCode;
+        else if (e)
+            key = e.which;
+        else
+            return true;
+        keychar = String.fromCharCode(key);
+
+        // control keys
+        if ((key == null) || (key == 0) || (key == 8) ||
+        (key == 9) || (key == 13) || (key == 27))
+            return true;
+
+            // numbers
+        else if ((("0123456789").indexOf(keychar) > -1))
+            return true;
+
+            //        // decimal point jump
+            //        else if (dec && (keychar == "."))
+            //           {
+            //           myfield.form.elements[dec].focus();
+            //           return false;
+            //           }
+        else
+            return false;
+    }
+
+
+    function DateCheck(myfield, e, dec) {
+        var key;
+        var keychar;
+
+        if (window.event)
+            key = window.event.keyCode;
+        else if (e)
+            key = e.which;
+        else
+            return true;
+        keychar = String.fromCharCode(key);
+
+        // control keys
+        if ((key == null) || (key == 0) || (key == 8) ||
+            (key == 9) || (key == 13) || (key == 27))
+            return true;
+
+            // numbers
+        else if ((("0123456789/").indexOf(keychar) > -1))
+            return true;
+
+
+        else
+            return false;
+    }
+    //-->
+    //-->
+
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            height: 70px;
+        }
+
+        .style2
+        {
+            width: 5%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+                <tr>
+                    <td class="header_bg" align="left" valign="bottom" colspan="2">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+
+                                <td style="height: 90px; color: #FF8000; background-color: #FFFBD6; font-size: xx-large; font-family: 'Times New Roman', Times, serif; text-align: center; font-weight: 700;"
+                                    align="left" valign="middle">
+                                    <%=Convert.ToString(Session["examname"])%>
+                                    <%-- <marquee  id="MARQUEE1" width="100%">eZeeMHCET</marquee>--%>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 1px; background-color: White;" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="menu_bg" style="padding-left: 20px;" colspan="2">
+                        <div id="ddtopmenubar" class="mattblackmenu">
+                            <ul style="background: alpha(70)">
+                                <li><a href="../Admin/Home.aspx">Home</a></li>
+                                <li><a href="../Admin/Practice.aspx">Practice</a></li>
+                                <li><a href="../Admin/Exam.aspx">Exam</a></li>
+                                <li><a href="../UserLogin.aspx">Logout</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top" align="center">
+
+                        <asp:Label ID="Label1" runat="server" ForeColor="#FF8000"
+                            Text="MH-CET"
+                            Style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: xx-large"></asp:Label><br />
+                        <asp:Label ID="Label2" runat="server" ForeColor="#C04000"
+                            Text="ONLINE EXAM"
+                            Style="font-weight: 700; font-family: 'Times New Roman', Times, serif; font-size: large"></asp:Label>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <asp:Menu ID="MenuItem1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2"
+                            Font-Names="Verdana" Font-Size="11pt" Font-Strikeout="False" Font-Underline="False"
+                            ForeColor="#990000" Height="103px" ItemWrap="True"
+                            StaticSubMenuIndent="10px"
+                            Font-Overline="False" Width="135px" OnMenuItemClick="MenuItem1_MenuItemClick">
+                            <StaticSelectedStyle BackColor="#FFCC66" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#FFFBD6" />
+                            <DynamicSelectedStyle BackColor="#FFCC66" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem Text="Practice" ToolTip="Click here to practice" Value="Practice"
+                                    NavigateUrl="~/Admin/Practice.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Exam" ToolTip="Click Here for exam" Value="Exam"
+                                    NavigateUrl="~/Admin/Exam.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Exit" Value="Exit"
+                                    ToolTip="Click here to exit" NavigateUrl="~/UserLogin.aspx"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                        <br />
+                        <br />
+
+                        <img src="../Images/ezeelogo.JPG" style="width: 139px; height: 78px" /><br />
+                    </td>
+                    <td style="width: 100%;" valign="top" align="center">
+                        <br />
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

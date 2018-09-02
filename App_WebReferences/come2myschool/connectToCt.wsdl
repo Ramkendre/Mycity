@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLongCodeSmsWeek">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schoolId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds1">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLongCodeSmsWeekResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLongCodeSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schoolId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLongCodeSmsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLongCodeSmsCommonMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schoolDbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLongCodeSmsCommonMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLongCodeSmsCommonClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schoolDbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLongCodeSmsCommonClassResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getChangeMobileNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schoolDbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usrUserId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getChangeMobileNoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLongCodeSmsCommon1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="schoolId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherMobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="section" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="schoolcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLongCodeSmsCommon1Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="school_registration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SchoolId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SchoolName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrincipleName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prin_MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Center" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distric" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColGroup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="school_registrationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="School_Teacher_Registration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SchoolId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherFName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TeacherLName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Teacher_MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClassId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SectionId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="School_Teacher_RegistrationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SchoolAppRegistrationDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImeiNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SimNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirmName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchoolAppRegistrationDetailsResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsWeekSoapIn">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsWeek" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsWeekSoapOut">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsWeekResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:getLongCodeSms" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsCommonMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsCommonMobile" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsCommonMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsCommonMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsCommonClassSoapIn">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsCommonClass" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsCommonClassSoapOut">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsCommonClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="getChangeMobileNoSoapIn">
+    <wsdl:part name="parameters" element="tns:getChangeMobileNo" />
+  </wsdl:message>
+  <wsdl:message name="getChangeMobileNoSoapOut">
+    <wsdl:part name="parameters" element="tns:getChangeMobileNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsCommon1SoapIn">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsCommon1" />
+  </wsdl:message>
+  <wsdl:message name="getLongCodeSmsCommon1SoapOut">
+    <wsdl:part name="parameters" element="tns:getLongCodeSmsCommon1Response" />
+  </wsdl:message>
+  <wsdl:message name="school_registrationSoapIn">
+    <wsdl:part name="parameters" element="tns:school_registration" />
+  </wsdl:message>
+  <wsdl:message name="school_registrationSoapOut">
+    <wsdl:part name="parameters" element="tns:school_registrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="School_Teacher_RegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:School_Teacher_Registration" />
+  </wsdl:message>
+  <wsdl:message name="School_Teacher_RegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:School_Teacher_RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchoolAppRegistrationDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:SchoolAppRegistrationDetails" />
+  </wsdl:message>
+  <wsdl:message name="SchoolAppRegistrationDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SchoolAppRegistrationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConnectToCTSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsWeek">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">School Sms Getter</wsdl:documentation>
+      <wsdl:input message="tns:getLongCodeSmsWeekSoapIn" />
+      <wsdl:output message="tns:getLongCodeSmsWeekSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">School Sms Getter</wsdl:documentation>
+      <wsdl:input message="tns:getLongCodeSmsSoapIn" />
+      <wsdl:output message="tns:getLongCodeSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommonMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">School Sms Mobile</wsdl:documentation>
+      <wsdl:input message="tns:getLongCodeSmsCommonMobileSoapIn" />
+      <wsdl:output message="tns:getLongCodeSmsCommonMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommonClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">School SMS Only class</wsdl:documentation>
+      <wsdl:input message="tns:getLongCodeSmsCommonClassSoapIn" />
+      <wsdl:output message="tns:getLongCodeSmsCommonClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getChangeMobileNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ChangeMobileNo</wsdl:documentation>
+      <wsdl:input message="tns:getChangeMobileNoSoapIn" />
+      <wsdl:output message="tns:getChangeMobileNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommon1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">commonsms_thr_WEb</wsdl:documentation>
+      <wsdl:input message="tns:getLongCodeSmsCommon1SoapIn" />
+      <wsdl:output message="tns:getLongCodeSmsCommon1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="school_registration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add School Registration Details</wsdl:documentation>
+      <wsdl:input message="tns:school_registrationSoapIn" />
+      <wsdl:output message="tns:school_registrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="School_Teacher_Registration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add School Teacher Registration Details</wsdl:documentation>
+      <wsdl:input message="tns:School_Teacher_RegistrationSoapIn" />
+      <wsdl:output message="tns:School_Teacher_RegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchoolAppRegistrationDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send App registration datils</wsdl:documentation>
+      <wsdl:input message="tns:SchoolAppRegistrationDetailsSoapIn" />
+      <wsdl:output message="tns:SchoolAppRegistrationDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConnectToCTSoap" type="tns:ConnectToCTSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsWeek">
+      <soap:operation soapAction="http://tempuri.org/getLongCodeSmsWeek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSms">
+      <soap:operation soapAction="http://tempuri.org/getLongCodeSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommonMobile">
+      <soap:operation soapAction="http://tempuri.org/getLongCodeSmsCommonMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommonClass">
+      <soap:operation soapAction="http://tempuri.org/getLongCodeSmsCommonClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChangeMobileNo">
+      <soap:operation soapAction="http://tempuri.org/getChangeMobileNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommon1">
+      <soap:operation soapAction="http://tempuri.org/getLongCodeSmsCommon1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="school_registration">
+      <soap:operation soapAction="http://tempuri.org/school_registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="School_Teacher_Registration">
+      <soap:operation soapAction="http://tempuri.org/School_Teacher_Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchoolAppRegistrationDetails">
+      <soap:operation soapAction="http://tempuri.org/SchoolAppRegistrationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConnectToCTSoap12" type="tns:ConnectToCTSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsWeek">
+      <soap12:operation soapAction="http://tempuri.org/getLongCodeSmsWeek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSms">
+      <soap12:operation soapAction="http://tempuri.org/getLongCodeSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommonMobile">
+      <soap12:operation soapAction="http://tempuri.org/getLongCodeSmsCommonMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommonClass">
+      <soap12:operation soapAction="http://tempuri.org/getLongCodeSmsCommonClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChangeMobileNo">
+      <soap12:operation soapAction="http://tempuri.org/getChangeMobileNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongCodeSmsCommon1">
+      <soap12:operation soapAction="http://tempuri.org/getLongCodeSmsCommon1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="school_registration">
+      <soap12:operation soapAction="http://tempuri.org/school_registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="School_Teacher_Registration">
+      <soap12:operation soapAction="http://tempuri.org/School_Teacher_Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchoolAppRegistrationDetails">
+      <soap12:operation soapAction="http://tempuri.org/SchoolAppRegistrationDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectToCT">
+    <wsdl:port name="ConnectToCTSoap" binding="tns:ConnectToCTSoap">
+      <soap:address location="http://103.16.140.243:8085/Webservice/connecttoct.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConnectToCTSoap12" binding="tns:ConnectToCTSoap12">
+      <soap12:address location="http://103.16.140.243:8085/Webservice/connecttoct.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Come2MyCityDB" Class="PaidSmsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=www.com;Initial Catalog=Come2MyCityDB;Persist Security Info=True;User ID=come2mycity" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Come2MyCityDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="sendPaidSmsStatus" Member="sendPaidSmsStatus">
+    <Type Name="sendPaidSmsStatus">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SendFron" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SendTo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="sms" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FlagStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sendDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="InsertPaidSMs" Method="InsertPaidSMs">
+    <Parameter Name="SendFrom" Parameter="sendFrom" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="sendTo" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="sms" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="SearchPaidSMs" Method="SearchPaidSMs">
+    <Parameter Name="SendFrom" Parameter="sendFrom" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="sendUpTo" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="sender" Type="System.String" DbType="NVarChar(15)" />
+    <ElementType Name="SearchPaidSMsResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SendFron" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SendTo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="sms" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FlagStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sendDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

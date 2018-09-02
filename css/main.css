@@ -1,0 +1,89 @@
+body
+{
+	text-align: center;
+	margin: 0;
+	background-color: #CCCCCC;
+	color: #000000;
+	background-image: url(images/backGround.jpg);
+	background-repeat: repeat-x;
+}
+
+a:link {
+	color: #ffffff;
+}
+a:hover {
+	color: #6f83ae;
+}
+a:active {
+	color: #00fff0;
+}
+
+
+.heading
+{
+	font-family: 'cooper Black';
+	font-size: 20px; /*color:#3b5998;*/
+	color: #009999;
+}
+
+
+.heading1
+{
+font-family:'cooper Black'; 
+font-size:20px; 
+/*color:#909292;*/
+color: #009999;
+}
+
+
+
+
+.para1 {
+	color: #3b5998;
+	font-family: Tahoma;
+	font-size: 12px;
+}
+.Down_menu {
+	color: #ffffff;
+	font-family: Tahoma;
+	font-size: 12px;
+}
+#frame
+{
+width:auto;
+}
+
+#header
+{ width:auto; 
+height:75px;
+}
+
+#tbl
+{
+width:900px;
+border:0px;
+
+}
+.tbl
+{
+width:900px;
+border:0px;
+
+}
+
+#para_a
+{
+width:678px;
+}
+
+.para_a
+{
+width:678px;
+}
+
+#header{
+	color: #ffffff;
+	font-size: 24px;
+	font-family: "cooper Black";
+}
+

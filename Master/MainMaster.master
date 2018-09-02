@@ -1,0 +1,372 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="Master_MainMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="~/Master/LeftNavigation.ascx" TagName="myLeftMenu" TagPrefix="duc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <link href="../KResource/CSS/Home.css" rel="stylesheet" type="text/css" />
+    <link href="../KResource/CSS/ControllerCSS.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/broC.css" rel="stylesheet" type="text/css" />
+    <link href="../resources1/stylesheet/ddlevelsmenu-base.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/Turms.css" rel="stylesheet" type="text/css" />
+    <link href="../resources1/stylesheet/css.css" rel="stylesheet" type="text/css" />
+
+    <script src="../Scripts/TurmsC.js" type="text/javascript"></script>
+
+    <script type="text/JavaScript"> 
+<!--
+        function AutoRefresh(t) {
+            setTimeout("location.reload(true);", t);
+        }
+//   -->
+    </script>
+
+    <script type="text/css" language="javascript">
+        // Fork for IE 5.5
+        if (window.navigator.appVersion.indexOf("IE 5.5") != -1) {
+            document.write("Internet Explorer 5.5")
+        }
+        // Fork for IE 6.0
+        if (window.navigator.appVersion.indexOf("IE 6.0") != -1) {
+            document.write("Internet Explorer 6.0")
+        }
+    </script>
+
+    <script type="text/css" language="javascript">
+
+       // Returns the browser application name 
+       // for example, "Microsoft Internet Explorer" or "Netscape"
+       document.write(window.navigator.appName);
+
+       // Returns the internal code name of the browser
+       // for example, "Mozilla"
+       document.write(window.navigator.appCodeName);
+
+       // Returns the version of the browser as a string
+       document.write(window.navigator.appVersion);
+
+       // Returns the user agent string for the browser
+       document.write(window.navigator.userAgent);
+
+    </script>
+
+    <meta name="Description" content="Come2MyCity, Welcome to All India Mobile Directory Users Association, 
+Make your friend groups and send free SMS, Free membership." />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Send free SMS, Free membership, unlimited free sms, Share your profile with your friends and relatives, 
+Mobile Directory, social networking sites, Best social networking sites, Good social networking sites, social networking sites,
+social networking websites, best social networking websites, easy update profile, mobile dictionary for india, Bulk SMS, Unlimited SMS, 
+send free messages, send free messages from your mobile, send unlimited free messages, send messages, Make frineds, send free message without registration,
+social networking site, Best social networking site, Good social networking site, social networking site, free social networking site,
+Offline free SMS, offline free message, offline social networking, offline social networking registration, use 09243100142,09243100142, use 9243100142, 9243100142,
+Find friends, First Mobile Directory of India, bhushan wagh, free for all indians, social networking company, social network, social networking pune, come2mycity,
+social networking company pune, pune social networking, mumbai social networking, social networking mumbai, my city, come to my city,
+let's SMS, let's Message, myct.in, myct, mycity, अखिल भारतीय मोबाईल डिरेक्टरी, मित्रांना आपल्या समूहात जोडा, नातेवाईकाला तुमच्या यादीत जोडा,  नातेवाईकाला आपल्या समूहात जोडा, मित्रांना तुमच्या यादीत जोडा, 
+समूहात नोंदणी करण्यासाठी, फ्री SMS ची सुविधा, पुणे सोसीअल नेटवर्क, मुंबई सोसीअल नेटवर्क, संदेश पाठवा , अमर्याद संदेश पाठवा, अमर्याद SMS  पाठवा, भूषण वाघ, कम २ माय सिटी, माय ct , 
+मोफत संदेश पाठवा, समूहाला SMS  पाठवण्यासाठी, इलेक्ट्रिक बिल दर महिन्याला तुमच्या मोबाईल वर मिळवा, इलेक्ट्रिक बिल आता तुमच्या मोबाईल वर.." />
+    <meta name="Author" content="EzeesoftIndia pune India" />
+    <title id="titleName" runat="server"></title>
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/Maincss.css" rel="stylesheet" type="text/css" />
+
+    <script src="../Resources/JScript/inputbox.js" type="text/javascript"></script>
+
+</head>
+
+<script type="text/javascript" language="javascript">
+    //var message = "Function Disabled!"; function clickIE4() { if (event.button == 2) { alert(message); return false; } } function clickNS4(e) { if (document.layers || document.getElementById && !document.all) { if (e.which == 2 || e.which == 3) { alert(message); return false; } } } if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS4; } else if (document.all && !document.getElementById) { document.onmousedown = clickIE4; } document.oncontextmenu = new Function("alert(message);return false") </script>
+
+<%--  <img src="../HomeImages/myct.png" alt="" style="width: 193px; height: 90px" />--%>
+<body>
+    <form id="form1" runat="server">
+    <div class="Header">
+        <center>
+            <div class="HeadBack">
+                <div style="margin-left: 30px; float: left; margin-top: 10px;">
+                    <img src="../HomeImages/myct.png" alt="" style="width: 193px; height: 80px" />
+                </div>
+                <div style="margin-right: 10px; float: right; margin-top: 10px; width: 300px;">
+                    <asp:Panel ID="loggedin" runat="server" Visible="false" Height="49px">
+                        <div id="cssm">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td align="center">
+                                        <a href="../html/UserInfo.aspx">
+                                            <%=Session["UserFirstNameN"]%>
+                                            <%=Session["UserLastNameN"]%></a>
+                                    </td>
+                                    <td align="right">
+                                        <div style="margin-left: 10px;">
+                                            <a href="../html/UserInfo.aspx">
+                                                <asp:Image ID="ImageProfile" runat="server" ImageUrl="~/Resources/UIImage/default_user.jpg"
+                                                    Height="31px" Width="35px" /></a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="margin-left: 10px; margin-right: 10px">
+                                            <a href="../html/Logout.aspx">Logout</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </asp:Panel>
+                </div>
+            </div>
+        </center>
+        <center>
+            <div>
+                <div id="Menudivback">
+                    <asp:Panel ID="pnlMenu" runat="server">
+                        <div id="nav">
+                            <ul>
+                                <li><a href="../html/HomePage.aspx">Home</a></li>
+                                <li><a href="../html/UserDisplay.aspx">Mobile Directory</a></li>
+                                <li><a href="../html/FriendRelative.aspx">Friends &amp; Relative</a>
+                                    <ul>
+                                        <li><a href='../html/FriendAddressBook.aspx'><span>Address Book</span></a> </li>
+                                        <li><a href="../html/CompanyAddressBook.aspx"><span>Company Book</span></a> </li>
+                                        <li><a href="../MarketingAdmin/WorkReport.aspx"><span>Work Report</span></a> </li>
+                                         <li><a href="../MarketingAdmin/ALL_Report.aspx"><span>ALL Report</span></a> </li>
+                                        <li><a href="../MarketingAdmin/AddCustomerDetails.aspx">EzeeMarketing Add Customer</a></li>
+                                    </ul>
+                                </li>
+                                <li id="smsactive" runat="server"><a href="#" onclick="fnSetNewControls">SMS</a>
+                                    <ul>
+                                        <li><a href="../html/QuickSMS.aspx">Quick SMS</a></li>
+                                        <li><a href="../html/GroupSMS.aspx">Group SMS</a></li>
+                                        <li><a href="../html/PromotionalSms.aspx">Promotional SMS</a></li>
+                                        <li><a href="../html/CustomizedSms.aspx">Customized SMS</a></li>
+                                        <li><a href="../html/ReminderSms.aspx">Reminder SMS</a></li>
+                                        <li><a href="../html/SentSMS.aspx">Sent Message</a></li>
+                                        <li><a href="../html/InboxSms.aspx">Inbox</a></li>
+                                        <li><a href="../html/FileUpload.aspx">Data Transfer</a></li>
+                                        <li><a href='#'><span>Balance Report</span></a>
+                                        <%--<li><a href ="../html/OnlinePaymentSuccessRpt.aspx">OnlinePaymentSuccess</a></li>--%>
+                                            <ul>
+                                                <li><a href="../html/TransactionalReport.aspx"><span>Transactional Report</span></a></li>
+                                                <li><a href="../html/PromotionalReport.aspx"><span>Promotional Report</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="../html/UserInfo.aspx">View Profile</a></li>
+                                <%--<li><a id="A1" href="~/html/JobSeeker.aspx" runat="server">JobPortal</a></li>--%>
+                                 <li><a href="#">Jobs</a>
+                                    <ul>
+                                        <%--<li><a href="../html/View MyProfile .aspx">View MyProfile</a></li>--%>
+                                        <li><a href="../html/JobProfile.aspx">CreateProfile</a></li>
+                                        <li><a href="../html/JCompanyRegistration.aspx">Company Regitration</a></li>
+                                        <li><a href="../html/JPostRequirment.aspx">Post Requirment</a></li>
+                                        <li><a href="../html/JobSeeker.aspx">JobPortal</a></li>
+                                        <li><a href="../html/JDemandJob.aspx">Demand Job</a></li>
+                                        <li><a href="../html/FriendRelative.aspx">Friends &amp; Relative</a>
+                                       <li><a href="../html/CategoryTreeReport.aspx">CategoryTreeReport</a>
+                                       
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="#">Events</a>
+                                    <ul>
+                                        <li><a href="../html/BirthdayEvent.aspx">Birthday</a></li>
+                                        <li><a href="../html/DeathEvent.aspx">Death</a></li>
+                                        <li><a href="../html/EventMyct.aspx">Marriage</a></li>
+                                        <li><a href="../html/MeetingEvent.aspx">Meeting</a></li>
+                                        <li><a href="../html/NewsEvent.aspx">News</a></li>
+                                        <li><a href="../html/RegisterComplaint.aspx">Complaint</a></li>
+                                        <li><a href="../html/ComplaintFollowUp.aspx">ComplaintFollowUp</a></li>
+                                        <li><a href="../html/Todays.aspx">Today</a></li>
+                                        <li><a href="../html/MainEventsID.aspx">MainEventsID</a></li>
+                                        <li><a href="../html/TodaysReports.aspx">TodaysReports</a></li>
+                                        <li><a href="../html/TreeReport.aspx">TreeReport</a></li>
+                                        <li><a href="../html/AddComboEvents.aspx">AddComboEvents</a></li>
+                                    </ul>
+                                </li>
+                                 <li><a href="#">Bachat Gat</a>
+                                    <ul>
+                                        <li><a href="../html/BMemRegistration.aspx">Member Registration</a></li>
+                                        <li><a href="../html/BSubscriptionInstalment.aspx">Subscription & Instalment</a></li>
+                                        <li><a href="../html/BIssueLoan.aspx">Issue Loan</a></li>
+                                        <li><a href="../html/BReceiveDeposite.aspx">Receive Deposit</a></li>
+                                        <li><a href="../html/BExpenditureEntries.aspx">Expenditure Entries</a></li>
+                                        <li><a href="../html/BSSGRulesSetting.aspx">SSGRules Setting</a></li>
+                                        <li><a href="../html/BasicReport.aspx">Basic Report</a></li>
+                                        <li><a href ="../html/SecReport.aspx">Report</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="#">Setting</a>
+                                    <ul>
+                                        <li><a href="../html/Changepass.aspx"><span>Change Password</span></a></li>
+                                        <li><a href="../html/changeMobileno.aspx"><span>Change Mobile No</span></a></li>
+                                        <li><a href="../html/Definegroup.aspx"><span>Define Group</span></a></li>
+                                        <li><a href="../html/Friendsetting.aspx"><span>Friend Setting</span></a></li>
+                                        <li><a href="../html/Members.aspx"><span>Members</span></a></li>
+                                        <li><a href="../html/Removegroups.aspx"><span>Remove Groups</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../html/Sitemap.aspx">Site Map</a></li>
+                                 
+                            </ul>
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="pnlSMenu" runat="server">
+                        <div id="nav">
+                            <ul>
+                                <li><a href="../html/UserRegistration.aspx">Log in/Register</a></li>
+                                <li><a href="../html/UserDisplay.aspx?Flag=1">Mobile Directory</a> </li>
+                                <li><a href="../Default.aspx">Home</a></li>
+                                <%-- <li><a href="../Logcode.aspx">Use 8378977897</a></li>--%>
+                                <li><a href="../Html/AboutUs.aspx">About Us</a></li>
+                                <li><a href="../Html/ContactUs.aspx">Contact Us</a></li>
+                                <li><a href="../Html/faq.aspx">FAQ&#39;S</a></li>
+                            </ul>
+                        </div>
+                    </asp:Panel>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <script type="text/javascript">
+        $('menu').dropotron();
+    </script>
+
+    <center>
+        <div class="Mdiv">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="MasterDiv">
+                                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                                </asp:ToolkitScriptManager>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="false" DisplayAfter="0">
+                                    <ProgressTemplate>
+                                        <div style="height: 30px; position: absolute; top: 300px; font-family: 'Calibri',sans-serif;
+                                            font-weight: 500; font-size: 16px; width: 100px; opacity: 0.9">
+                                            <img src="../KResource/Images/LoadinImg.gif" alt="" /><br />
+                                            Please wait.....
+                                        </div>
+                                    </ProgressTemplate>
+                                </asp:UpdateProgress>
+                                <asp:AlwaysVisibleControlExtender ID="AlwaysVisibleControlExtender1" runat="server"
+                                    TargetControlID="UpdateProgress1" HorizontalSide="Center" VerticalSide="Top"
+                                    HorizontalOffset="0" VerticalOffset="0">
+                                </asp:AlwaysVisibleControlExtender>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </center>
+    <div class="FooterMain">
+        <center>
+            <div class="Footer">
+                <div style="float: right; width: 200px; height: 50px; background: #a1c6c5; margin-top: 20px;
+                    margin-right: 20px; border-radius: 5px;">
+                    <div class="siteuser">
+                        <asp:UpdatePanel ID="ChangeCity" runat="server">
+                            <ContentTemplate>
+                                <div style="float: left; width: 200px;">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span style="color: #742d11; font-weight: bold">City:<%=Session["CityNameN"]%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:LinkButton ID="lnkChangeCity" CssClass="LinkCss" runat="server" Text="Change City"></asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <%--Popup for change city--%>
+                                <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" TargetControlID="lnkChangeCity"
+                                    PopupControlID="panChagneCity" BackgroundCssClass="modalBackground" CancelControlID="btnCancel"
+                                    PopupDragHandleControlID="panChangeCity">
+                                </asp:ModalPopupExtender>
+                                <asp:Panel ID="panChagneCity" runat="server" class="ModalPop">
+                                    <div style="background: #164854; color: #fff; width: 250px; height: 170px; border-radius: 5px;
+                                        border: 3px solid #fff;">
+                                        <table>
+                                            <tr>
+                                                <td colspan="2" align="left">
+                                                    <center>
+                                                        <span class="spanHeader">Choose Your City</span>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    State
+                                                </td>
+                                                <td align="left">
+                                                    <asp:DropDownList ID="ddlState" runat="server" Width="140px" ValidationGroup="city"
+                                                        CssClass="cssddlwidth" AutoPostBack="true" OnSelectedIndexChanged="ddlState_SelectedIndexChanged">
+                                                    </asp:DropDownList>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="city" runat="server"
+                                                        ErrorMessage="Select State" Display="None" ControlToValidate="ddlState" InitialValue=""></asp:RequiredFieldValidator>
+                                                    <asp:ValidatorCalloutExtender ID="ValidatorCalloutExtender1" runat="server" TargetControlID="RequiredFieldValidator1">
+                                                    </asp:ValidatorCalloutExtender>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    District
+                                                </td>
+                                                <td align="left">
+                                                    <asp:DropDownList ID="ddlDistrict" runat="server" ValidationGroup="city" Width="140px"
+                                                        CssClass="cssddlwidth" AutoPostBack="true" OnSelectedIndexChanged="ddlDistrict_SelectedIndexChanged">
+                                                    </asp:DropDownList>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="city" runat="server"
+                                                        ErrorMessage="Select District" Display="None" ControlToValidate="ddlDistrict"
+                                                        InitialValue=""></asp:RequiredFieldValidator>
+                                                    <asp:ValidatorCalloutExtender ID="ValidatorCalloutExtender2" runat="server" TargetControlID="RequiredFieldValidator2">
+                                                    </asp:ValidatorCalloutExtender>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    City
+                                                </td>
+                                                <td align="left">
+                                                    <asp:DropDownList ID="ddlCity" runat="server" ValidationGroup="city" Width="140px"
+                                                        CssClass="cssddlwidth">
+                                                    </asp:DropDownList>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="city" runat="server"
+                                                        ErrorMessage="Select City" Display="None" ControlToValidate="ddlCity" InitialValue=""></asp:RequiredFieldValidator>
+                                                    <asp:ValidatorCalloutExtender ID="ValidatorCalloutExtender3" runat="server" TargetControlID="RequiredFieldValidator3">
+                                                    </asp:ValidatorCalloutExtender>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td align="left">
+                                                    <asp:Button ID="btnChange" Text="Change" ValidationGroup="city" CssClass="cssbtn"
+                                                        runat="server" OnClick="btnChange_Click" />
+                                                    &nbsp;
+                                                    <asp:Button ID="btnCancel" Text="Cancel" CssClass="cssbtn" runat="server" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </asp:Panel>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+                <span>All rights are reserved Copyright @2010 eZeesoftindia.            </div>
+                <span>All rights are reserved Copyright @2010 eZeesoftindia. </span>
+            </div>
+        </center>
+    </div>
+    </form>
+</body>
+</html>

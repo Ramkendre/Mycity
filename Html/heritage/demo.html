@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .cardContainer
+        {
+            width: 200px;
+            height: 100px;
+            background-color: #82981c;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            -khtml-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+            border: 1px solid #4c4c4c;
+        }
+        .cardTopLineNullContainer
+        {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 50px 5px 0px 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+        .cardTopLineNullContainer::before, .cardTopLineNullContainer::after
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 50%;
+            height: 50px;
+        }
+        .cardTopLineNullContainer::after
+        {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+        .cardNullContainer
+        {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0px 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+        .cardNullContainer::before, .cardNullContainer::after
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            height: 100px;
+        }
+        .cardNullContainer::after
+        {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+        .cardNullContainer1
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0px 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+        .cardNullContainer1::after
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            height: 40px;
+        }
+        .cardNullContainer1::after
+        {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+        .cardNullContainer2
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0px 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+        .cardNullContainer2::before
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            height: 50px;
+        }
+        .cardNullContainer2::after
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 50%;
+            height: 40px;
+        }
+        .cardNullContainer2::after
+        {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+        .cardNullContainer3
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 0px 0px 0px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+        .cardNullContainer3::before, .cardNullContainer3::after
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 80%;
+            height: 50px;
+        }
+        .cardNullContainer3::after
+        {
+            right: auto;
+            left: 50%;
+        }
+        .cardNullContainer4
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0px 5px;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+        }
+        .cardNullContainer4::before, .cardNullContainer4::after
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            height: 40px;
+        }
+        .cardNullContainer4::after
+        {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table width="700px">
+        <tr>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer">
+                    <span></span>
+                </div>
+            </td>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer">
+                </div>
+            </td>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="">
+                </div>
+            </td>
+            <td>
+                <div class="cardTopLineNullContainer">
+                </div>
+            </td>
+            <td>
+                <div class="">
+                </div>
+            </td>
+            <td>
+                <div class="cardTopLineNullContainer">
+                </div>
+            </td>
+            <td>
+                <div class="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="">
+                </div>
+            </td>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer">
+                </div>
+            </td>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+            <td>
+                <div class="">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cardNullContainer1">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer3">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer4">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer3">
+                </div>
+            </td>
+            <td>
+                <div class="cardNullContainer2">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+            <td>
+                <div class="">
+                </div>
+            </td>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+            <td>
+                <div class="">
+                </div>
+            </td>
+            <td>
+                <div class="cardContainer">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

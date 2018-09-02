@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="putOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DrugName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="agencyRegId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerRegId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="putOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="putOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="purOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="medincines" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="purOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="purOrdersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Registration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firmName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firmType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refMobNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="landlineNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pincode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="district" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taluka" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imei" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="simserial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typeofUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="putOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:putOrder" />
+  </wsdl:message>
+  <wsdl:message name="putOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:putOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="purOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:purOrders" />
+  </wsdl:message>
+  <wsdl:message name="purOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:purOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InsertUploadedDataSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="putOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert Purchase order Details</wsdl:documentation>
+      <wsdl:input message="tns:putOrderSoapIn" />
+      <wsdl:output message="tns:putOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="purOrders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert Purchase order Details</wsdl:documentation>
+      <wsdl:input message="tns:purOrdersSoapIn" />
+      <wsdl:output message="tns:purOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Register all retailer, dealer, personal, salesman, mr</wsdl:documentation>
+      <wsdl:input message="tns:RegistrationSoapIn" />
+      <wsdl:output message="tns:RegistrationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InsertUploadedDataSoap" type="tns:InsertUploadedDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="putOrder">
+      <soap:operation soapAction="http://tempuri.org/putOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purOrders">
+      <soap:operation soapAction="http://tempuri.org/purOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InsertUploadedDataSoap12" type="tns:InsertUploadedDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="putOrder">
+      <soap12:operation soapAction="http://tempuri.org/putOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purOrders">
+      <soap12:operation soapAction="http://tempuri.org/purOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap12:operation soapAction="http://tempuri.org/Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InsertUploadedData">
+    <wsdl:port name="InsertUploadedDataSoap" binding="tns:InsertUploadedDataSoap">
+      <soap:address location="http://www.ezeeorder.in:8124/WebServices/InsertUploadedData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InsertUploadedDataSoap12" binding="tns:InsertUploadedDataSoap12">
+      <soap12:address location="http://www.ezeeorder.in:8124/WebServices/InsertUploadedData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

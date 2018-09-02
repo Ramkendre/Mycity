@@ -1,0 +1,173 @@
+﻿body
+{
+}
+.mainContainer
+{
+	height: 500px;
+	width: 98%;
+	background-color: #ededed;
+}
+
+.IconPlusButton
+{
+	background-image: url(../imagess/Add_icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 24px !important;
+	border: none !important;
+	outline: none;
+	background-color: transparent;
+}
+.IconMinusButton
+{
+	background-image: url(../imagess/Delete.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 24px;
+	border: none !important;
+	outline: none;
+	margin-top: 3px;
+	background-color: transparent;
+}
+.EditButton
+{
+	background-image: url(../imagess/Edit.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 24px;
+	border: none !important;
+	outline: none;
+	margin-top: 3px;
+	background-color: transparent;
+}
+.EditButton:hover
+{
+	cursor: pointer;
+}
+.IconMinusButton:hover, .IconPlusButton:hover
+{
+	cursor: pointer;
+}
+.allButtons
+{
+	float: right;
+	height: 20px;
+}
+.submitButton
+{
+	background-image: url(../imagess/Button_bg.png);
+	background-position: 0 -90px;
+	background-repeat: repeat-x;
+	background-color: transparent;
+	color: #4C4C4C;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	height: 24px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 20px !important;
+	padding: 0px 10px;
+	text-shadow: 0 1px 0 #FAFAFA;
+	border: none;
+	cursor: pointer;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #4c4c4c;
+}
+.submitButton
+{
+	font-size: 14px !important;
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+.submitButton:hover
+{
+	background-position: 0 -30px;
+	color: White;
+	text-shadow: 0 1px 0 #333333;
+}
+.submitButton:active
+{
+	background-position: 0 -60px;
+	color: #f1f1f1;
+	text-shadow: 0 1px 0 #333333;
+}
+
+.cardContainer
+{
+	width: 200px;
+	height: 100px;
+	background-color: #82981c;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #4c4c4c;
+}
+.cardHeader
+{
+	height: 20px;
+}
+.personPhoto
+{
+	width: 60px;
+	height: 70px;
+	position: absolute;
+	background-color: Red;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.personInfo
+{
+	width: 120px;
+	height: 70px;
+	float: right;
+	background-color: Yellow;
+	margin: 5px;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #4C4C4C;
+}
+.imageClass
+{
+}
+
+.addPersonModel
+{
+	height: 300px;
+	width: 410px;
+}
+.addPersonModelTable
+{
+	width: 400px !important;
+}
+.addPersonModelTable td:first-child
+{
+	width: 120px !important;
+}
+.addPersonModelTable td:last-child
+{
+	width: 200px !important;
+}
